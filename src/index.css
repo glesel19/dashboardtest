@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 26% 14%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 24% 16%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 24% 16%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 26% 14%;
+
+    --secondary: 220 20% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 18% 22%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 28 90% 55%;
+    --accent-foreground: 220 26% 14%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 220 26% 14%;
+
+    --warning: 45 93% 47%;
+    --warning-foreground: 220 26% 14%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 18% 26%;
+    --input: 220 18% 26%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 28% 12%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 220 26% 14%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 18% 20%;
+    --sidebar-ring: 217 91% 60%;
+
+    /* Custom tokens for fleet tracking */
+    --live-pulse: 142 71% 45%;
+    --map-bg: 220 22% 18%;
+    --metric-card: 220 24% 18%;
+    --alert-critical: 0 84% 60%;
+    --alert-warning: 45 93% 47%;
+    --alert-info: 217 91% 60%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 50%));
+    --gradient-alert: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 50%));
+    --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 35%));
+    --gradient-card: linear-gradient(180deg, hsl(220 24% 18%), hsl(220 24% 16%));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 20px hsl(217 91% 60% / 0.3);
+    --shadow-card: 0 4px 12px hsl(220 26% 8% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
